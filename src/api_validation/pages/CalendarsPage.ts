@@ -68,6 +68,19 @@ export class CalendarsPage {
     await randomDate.element.click();
   }
 
+  async selectRandomTimeZone() {
+    await this.page.locator(locators.selectTimeZoneButton).click();
+    const allTimeZones = await this.page.locator(locators.alltimeZones).all();
+
+    if(allTimeZones.length === 0){
+      throw new Error('No available timezone to select.');
+    }
+    const randomTimezone = allTimeZones[Math.floor(Math.random() * (allTimeZones.length-2))];
+    await randomTimezone.waitFor({state: 'visible'});
+    await randomTimezone.click();
+    console.log(randomTimezone.locator('.option__title').textContent());
+  }
+
   async selectRandomSlot() {
     // Get all the available slots
     const allSlots = await this.page.locator(locators.allAvailableSlots).all();
@@ -112,7 +125,7 @@ export class CalendarsPage {
     ]);
     // Get the response body
     const responseBody = await response.json();
-    console.log(responseBody.id);
+    console.log('appointment-details:', JSON.stringify(responseBody, null, 2));
     return responseBody;
   }
 }

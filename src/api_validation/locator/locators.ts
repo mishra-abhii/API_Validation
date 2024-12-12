@@ -13,6 +13,9 @@ export const locators = {
     inputPhoneNumber: '//input[@id="phone"]',
     inputEmail: '//div[@class="email-input block"]/input',
     clickCheckbox: '//div[@class="terms-and-conditions"]/input',
-    scheduleMeetingButton: '//button[@id="schedule-meeting-button"]'
+    scheduleMeetingButton: '//button[@id="schedule-meeting-button"]',
+
+    selectTimeZoneButton: '//div[@class="multiselect__select"]',
+    alltimeZones: '//ul[@id="listbox-null"]/li'
     
 }
