@@ -125,7 +125,7 @@ export class CalendarsPage {
     ]);
     // Get the response body
     const responseBody = await response.json();
-    console.log('appointment-details:', JSON.stringify(responseBody, null, 2));
+    console.log('Network Response for Appointment:', JSON.stringify(responseBody, null, 2));
     return responseBody;
   }
 }

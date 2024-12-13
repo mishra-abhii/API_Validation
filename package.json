@@ -9,6 +9,7 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.49.1",
+    "@types/luxon": "^3.4.2",
     "@types/node": "^22.10.2",
     "typescript": "^5.7.2"
   },
