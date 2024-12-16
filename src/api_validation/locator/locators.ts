@@ -1,5 +1,3 @@
-import { scheduler } from "timers/promises";
-
 export const locators = {
     
     currYearOnWidget: '(//div[@class="vdpPeriodControl"]/button)[2]',
